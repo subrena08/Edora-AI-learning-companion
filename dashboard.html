@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style') }}">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            color: white;
+
+            /* 🌈 Gradient Background */
+            background: linear-gradient(135deg, #3b82f6, #9333ea, #ec4899);
+        }
+
+        .header {
+            text-align: center;
+            padding: 30px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            width: 200px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            background: rgba(255,255,255,0.2);
+        }
+
+        .card a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .motivation {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 20px;
+            font-style: italic;
+            padding: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    🌟 Welcome {{ session['user'] }} 👋
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <a href="/chatbot">🤖 Chat with AI</a>
+    </div>
+
+    <div class="card">
+        <a href="/quiz">🧠 Take Quiz</a>
+    </div>
+
+</div>
+
+<!-- 💬 Motivation Section -->
+<div class="motivation">
+    "Small steps every day lead to big success." 🚀  
+    <br><br>
+    "Don’t stress, progress!" 💪  
+    <br><br>
+    "You are capable of amazing things." 🌟  
+</div>
+
+<div class="footer">
+    Made for students ❤️ | Keep Learning!
+</div>
+
+</body>
+</html>
